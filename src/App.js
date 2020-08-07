@@ -1,6 +1,8 @@
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
-import Lists from "./Lists";
+import Card from "react-native-paper";
+import Inputs from "./Input";
+import List from "./Lists";
 export default class App extends React.Component {
   render() {
     return (
@@ -8,16 +10,24 @@ export default class App extends React.Component {
         <Text>Rakesh</Text>
         <Text>Changes you make will automatically reload.</Text>
         <Text>Shake your phone to open the developer menu.</Text>
-        <Lists />
+
+        <Inputs />
       </View>
     );
   }
 }
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center"
+    justifyContent: "center",
+    backgroundColor: "#ecf0f1",
+    padding: 8
+  },
+  paragraph: {
+    margin: 24,
+    fontSize: 18,
+    fontWeight: "bold",
+    textAlign: "center"
   }
 });
